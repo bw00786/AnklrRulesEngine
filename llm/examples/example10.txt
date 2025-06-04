@@ -1,0 +1,9 @@
+Example 10: Plan Type Expansion
+Natural Language:
+"403B plans should be included in qualified plan types"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Plan_Type_403B    5    403B Plan Inclusion    plan_type in ["SEP IRA", "IRA", "Simple IRA", "403B"]    set type to boolean_result; set result to True

@@ -1,0 +1,8 @@
+# Multiple Account Aggregation
+NL: Aggregate RMD amounts across all IRA accounts except Roth IRAs
+DSL:
+context    name    priority    description    conditions    actions
+Aggregation    IRA_Aggregation_Rule    4    Multiple IRA RMD calculation    plan_type in ["Traditional IRA", "SEP IRA", "SIMPLE IRA"]    
+    set calculation_method to "sum_all_accounts"
+    set exclude_types to ["Roth IRA", "Inherited IRA"]
+    set reporting to "Form 5498"

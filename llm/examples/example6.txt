@@ -1,0 +1,8 @@
+# Uniform Lifetime Table
+NL: Calculate RMD using IRS Uniform Lifetime Table factors
+DSL:
+context    name    priority    description    conditions    actions
+Calculation    Uniform_Table_RMD    5    Standard RMD calculation    true    
+    set formula to account_balance / uniform_life_table[participant_age]
+    set documentation to "IRS Publication 590-B"
+    set update_check to "Annual"

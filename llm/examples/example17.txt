@@ -1,0 +1,9 @@
+Example 17: Inherited IRA Non-EDB
+Natural Language:
+"Non-eligible designated beneficiaries must use 5-year rule"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Inherited_Non_EDB    1    5-Year Rule for Non-EDBs    inherited_ira == True and beneficiary_type != "EDB"    set type to set_distribution_schedule; set distribution_period to "5 Years"

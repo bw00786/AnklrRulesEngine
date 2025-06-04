@@ -1,0 +1,8 @@
+# Still-Working Exception
+NL: Active participants can delay 401(k) RMDs until retirement if still working
+DSL:
+context    name    priority    description    conditions    actions
+Exception    Still_Working_Exception    3    Active employee deferral    employment_status == "active" and plan_type == "401K" and ownership_percent < 5%    
+    set rmd_deferral to true
+    set documentation_required to ["Employment verification", "Plan documents"]
+    set deadline to "April 1 following retirement"

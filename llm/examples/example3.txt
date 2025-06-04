@@ -1,0 +1,8 @@
+# Spousal Beneficiary Exception
+NL: Spouse beneficiaries can defer RMDs until deceased participant would have reached 73
+DSL:
+context    name    priority    description    conditions    actions
+Beneficiary    Spousal_RMD_Deferral    3    Spousal deferral exception    beneficiary_type == "spouse" and deceased_participant_age < 73    
+    set type to defer_rmd
+    set defer_years to 73 - deceased_participant_age
+    set documentation_required to true

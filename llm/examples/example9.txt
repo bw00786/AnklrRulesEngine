@@ -1,0 +1,4 @@
+NL: "Participants born between 1960-1969 must take RMDs starting at age 75"
+
+DSL: context    name    priority    description    conditions    actions
+RMD_Distribution    75_Sub_RMD_1960s    7    75 Sub RMD for 1960s cohort    dob >= '1960-01-01' and dob <= '1969-12-31' and participant_age >= 75    set type to boolean_result; set eligible_status to True

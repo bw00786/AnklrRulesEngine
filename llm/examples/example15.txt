@@ -1,0 +1,9 @@
+Example 15: Roth Conversion Timing
+Natural Language:
+"Roth conversions before 2024 are not RMD exempt"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Pre_2024_Roth    9    Pre-2024 Roth Treatment    account_type == "Roth" and conversion_year < 2024    set type to calculate_rmd; set rmd_type to required

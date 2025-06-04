@@ -1,0 +1,9 @@
+Example Example 12: QCD Limit Test
+Natural Language:
+"QCDs over $108,000 cannot satisfy RMD requirements"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    QCD_Limit_Exceeded    2    QCD Over Limit    qcd_amount > 108000 and refRule("73_Initial_RMD")    set type to satisfies_rmd; set qcd_eligible to False

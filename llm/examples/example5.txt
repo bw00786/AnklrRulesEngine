@@ -1,0 +1,8 @@
+# Roth 401(k) Conversion
+NL: Roth 401(k) accounts require RMDs but can be converted to Roth IRA to avoid
+DSL:
+context    name    priority    description    conditions    actions
+Conversion    Roth_401K_Conversion    4    Roth conversion strategy    plan_type == "Roth 401K" and participant_age >= 73    
+    set recommendation to "Convert to Roth IRA"
+    set deadline to "Before Dec 31"
+    set tax_implications to "None if qualified"

@@ -1,0 +1,9 @@
+Example 13: Inactive Participant
+Natural Language:
+"Inactive participants with balances under $1000 are RMD exempt"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Small_Balance_Exemption    4    Small Balance Rule    participant_status == "Inactive" and prior_year_end_balance < 1000    set type to calculate_rmd; set rmd_type to exempt

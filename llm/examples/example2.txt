@@ -1,0 +1,8 @@
+# Inherited IRA Rules
+NL: Beneficiaries of inherited IRAs must take annual RMDs regardless of age
+DSL:
+context    name    priority    description    conditions    actions
+Inherited    Inherited_IRA_RMD    4    Inherited IRA distribution    account_owner_status == "deceased" and beneficiary_type == "non-spouse" and account_age_years >= 1    
+    set type to calculate_rmd
+    set formula to account_balance / life_expectancy_irs
+    set deadline to "Dec 31"

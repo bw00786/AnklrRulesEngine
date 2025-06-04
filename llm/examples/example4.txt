@@ -1,0 +1,8 @@
+# Missed RMD Penalty
+NL: 25% penalty on missed RMD amounts not withdrawn by deadline
+DSL:
+context    name    priority    description    conditions    actions
+Penalty    Missed_RMD_Penalty    5    IRS penalty calculation    rmd_required = true and rmd_taken = false and current_date > "Dec 31"    
+    set penalty to rmd_amount * 0.25
+    set type to report_irs_form_5329
+    set deadline to "Tax filing deadline"

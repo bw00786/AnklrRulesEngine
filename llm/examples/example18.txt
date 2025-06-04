@@ -1,0 +1,9 @@
+Example 18: Age Difference Alert
+Natural Language:
+"Flag age differences over 15 years for manual review"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Large_Age_Gap    7    Significant Age Difference Check    marital_status == "Married" and age_difference > 15    set type to flag_data_issue; set review_reason to "Large spousal age gap"

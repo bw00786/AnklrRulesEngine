@@ -1,0 +1,1 @@
+set type to calculate_rmd_amount;set formula to"prior_year_end_balance/[GET:get_life_expectancy_factor(participant_age)]";set balance_field to prior_year_end_balance;set divisor_source to "function:get_life_expectancy_factor";  set validation to IRS-2024-590B;set distribution_dates to ['2025-04-01', '2025-12-31'];

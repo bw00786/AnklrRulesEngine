@@ -1,0 +1,9 @@
+Example 14: Uniform Table Edge Case
+Natural Language:
+"Use joint life expectancy table when spouse is sole beneficiary"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Joint_Life_Calculation    6    Joint Life Expectancy    marital_status == "Married" and beneficiary == "Spouse" and beneficiary_allocation == 100    set type to calculate_rmd_amount; set divisor_source to joint_life_table_factor

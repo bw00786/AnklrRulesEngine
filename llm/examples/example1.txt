@@ -1,0 +1,7 @@
+# Basic RMD Age Threshold
+NL: Participants must take RMDs from 401(k) plans starting at age 73
+DSL:
+context    name    priority    description    conditions    actions
+RMD        Basic_Age_73_RMD    5    Standard RMD trigger    participant_age >= 73 and plan_type in ["401K", "403B", "457B"] and prior_year_end_balance > 0    
+    set type to calculate_rmd
+    set rmd_type to "standard"

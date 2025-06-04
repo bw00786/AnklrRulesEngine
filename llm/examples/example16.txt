@@ -1,0 +1,9 @@
+Example 16: Active Participant Check
+Natural Language:
+"Verify active participation status for RMD eligibility"
+
+DSL:
+
+text
+context    name    priority    description    conditions    actions
+RMD_Distribution    Active_Check    3    Active Participation Verification    employment_status == "Active" and hours_worked >= 1000    set type to boolean_result; set active_status to True
